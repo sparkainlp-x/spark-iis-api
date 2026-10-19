@@ -1,0 +1,27 @@
+{
+  "claims": [],
+  "evidence_tag": "SYNTHETIC",
+  "mode": "wellness_demo",
+  "protocol_id": "fade-calm-01",
+  "steps": [
+    {
+      "brightness_max": 0.5,
+      "colour": "#4060a0",
+      "duration_s": 60.0,
+      "field_fraction": 0.2,
+      "modality": "visual",
+      "pattern": "fade",
+      "period_s": 8.0
+    },
+    {
+      "duration_s": 60.0,
+      "fade_in_s": 5.0,
+      "fade_out_s": 5.0,
+      "freq_hz": 220.0,
+      "level_dba": 45.0,
+      "modality": "audio",
+      "pattern": "tone"
+    }
+  ],
+  "version": "0.1.0"
+}

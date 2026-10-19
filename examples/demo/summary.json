@@ -1,0 +1,35 @@
+{
+  "audit_chain_ok": true,
+  "audit_entries": 21,
+  "boundary": "This software is not a medical device. It does not diagnose, treat, cure or prevent any condition. No therapeutic, neurological, \"coherence\", HBOT-synergy or quantum effect is claimed or established. All numbers are tagged SYNTHETIC, REPORTED, TARGET or UNRUN.",
+  "completed": {
+    "dimmed": 0,
+    "end_reason": "protocol_complete",
+    "frames": 59,
+    "sid": "s-be8487aa80fe",
+    "state": "COMPLETED"
+  },
+  "latched": {
+    "cleared_by": "op-demo",
+    "latch_S": 0.8000000000000002,
+    "latch_reason": "residual_latch",
+    "latch_t_ms": 5000,
+    "sid": "s-9019097b2ffd",
+    "state": "LATCHED"
+  },
+  "refused": {
+    "protocol_id": "flicker-red-7p5",
+    "rules": [
+      "CLAIM_FORBIDDEN",
+      "CLAIM_UNSUPPORTED",
+      "FADE_ONLY",
+      "FIELD_SIZE",
+      "PHOTOSENSITIVITY_FLASH_RATE",
+      "RED_SATURATION"
+    ],
+    "status": 422,
+    "stored": false
+  },
+  "seed": 42,
+  "tag": "SYNTHETIC"
+}

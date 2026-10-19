@@ -1,0 +1,24 @@
+{
+  "claims": [
+    {
+      "source": "none",
+      "tag": "UNRUN",
+      "text": "7.83 Hz flicker entrains brain coherence"
+    }
+  ],
+  "evidence_tag": "UNRUN",
+  "mode": "wellness_demo",
+  "protocol_id": "flicker-red-7p5",
+  "steps": [
+    {
+      "brightness_max": 1.0,
+      "colour": "#ff0000",
+      "duration_s": 600.0,
+      "field_fraction": 0.4,
+      "modality": "visual",
+      "pattern": "flicker",
+      "rate_hz": 7.5
+    }
+  ],
+  "version": "0.1.0"
+}

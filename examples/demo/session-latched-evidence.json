@@ -1,0 +1,302 @@
+{
+  "events": [
+    {
+      "previous": null,
+      "reason": "created",
+      "seq": 0,
+      "state": "CREATED",
+      "t_ms": 0,
+      "type": "state"
+    },
+    {
+      "previous": "CREATED",
+      "reason": "screening_on_file",
+      "seq": 1,
+      "state": "SCREENED",
+      "t_ms": 0,
+      "type": "state"
+    },
+    {
+      "previous": "SCREENED",
+      "reason": "consent_active",
+      "seq": 2,
+      "state": "CONSENTED",
+      "t_ms": 0,
+      "type": "state"
+    },
+    {
+      "previous": "CONSENTED",
+      "reason": "envelope_ok",
+      "seq": 3,
+      "state": "ARMED",
+      "t_ms": 0,
+      "type": "state"
+    },
+    {
+      "input": "switch",
+      "intent": "start",
+      "seq": 4,
+      "t_ms": 0,
+      "type": "confirmation"
+    },
+    {
+      "previous": "ARMED",
+      "reason": "participant_confirmed",
+      "seq": 5,
+      "state": "RUNNING",
+      "t_ms": 0,
+      "type": "state"
+    },
+    {
+      "latch": {
+        "R": 0.8000000000000002,
+        "S": 0.8000000000000002,
+        "action": "stop",
+        "channel": "oes-0",
+        "detail": "S >= tau (0.5)",
+        "reason": "residual_latch",
+        "sid": "s-9019097b2ffd",
+        "t_ms": 5000,
+        "tag": "SYNTHETIC",
+        "tau": 0.5
+      },
+      "seq": 6,
+      "t_ms": 5000,
+      "type": "latch"
+    },
+    {
+      "previous": "RUNNING",
+      "reason": "residual_latch",
+      "seq": 7,
+      "state": "LATCHED",
+      "t_ms": 5000,
+      "type": "state"
+    },
+    {
+      "reason": "stream_stop",
+      "seq": 8,
+      "state": "LATCHED",
+      "t_ms": 5000,
+      "type": "stop_repeated"
+    },
+    {
+      "note": "SYNTHETIC demo: drift injected on purpose",
+      "operator_id": "op-demo",
+      "seq": 9,
+      "t_ms": 5000,
+      "type": "latch_cleared"
+    }
+  ],
+  "manifest": {
+    "boundary": "This software is not a medical device. It does not diagnose, treat, cure or prevent any condition. No therapeutic, neurological, \"coherence\", HBOT-synergy or quantum effect is claimed or established. All numbers are tagged SYNTHETIC, REPORTED, TARGET or UNRUN.",
+    "clock": "monotonic milliseconds since session creation; no wall-clock time is recorded",
+    "code": {
+      "git_commit": "unrecorded",
+      "package": "spark-iis-api",
+      "source_tree_sha256": "1299f32a9cc85f3006e4d27ae92bae6d5ef71dcc0548d65a20c15801f27f9f55",
+      "version": "0.1.0"
+    },
+    "inputs": {
+      "calibrations_sha256": {
+        "sim-audio": "3afd9ddc274aad3d92a73ca43fa88a5082521267a8c1dc5c5ac374825b2c5239",
+        "sim-display": "3afd9ddc274aad3d92a73ca43fa88a5082521267a8c1dc5c5ac374825b2c5239",
+        "sim-sensor": "849cbe0aba81bb49d3ebcdcaa080099f87a2ecef89028a585c259429459d721d"
+      },
+      "devices_sha256": {
+        "sim-audio": "5589fa2d6d9a58193a166fe8ab801103d363796d80f4f201dce98a32d60ffa50",
+        "sim-display": "1e5d2db683da196a198db0d5df3fe8601bb2fa901e1d369fcaa79991bcab57a8",
+        "sim-sensor": "d85b66dd113b9b5fc07da2e367ec811a2e61a00da57ae47e04cc447d85bd41cb"
+      },
+      "protocol_sha256": "9f9e95a20851a93cc040b3fc3326794b94d8188e533bcefc0abab7ce6ba850cc"
+    },
+    "outputs": {
+      "events_sha256": "d02733e873ad18289d5501eba1fec478af3c42e7ff771c275d8c3dcd6fac88e0",
+      "report_sha256": "1d369d54b30c37a902f8a8f39114acb7498d9788f2306dc9c2b40637ea9f9135",
+      "telemetry_hashes_sha256": "9fd04347ea36abbe634f186da85b03301933a8750d09800214e44d1f935c79f1"
+    },
+    "schema": "spark-iis-evidence/0.1",
+    "seed": 42,
+    "sid": "s-9019097b2ffd"
+  },
+  "markdown": "# Evidence report: session `s-9019097b2ffd`\n\n> This software is not a medical device. It does not diagnose, treat, cure or prevent any condition. No therapeutic, neurological, \"coherence\", HBOT-synergy or quantum effect is claimed or established. All numbers are tagged SYNTHETIC, REPORTED, TARGET or UNRUN.\n\nAll device output in this report is **simulated**. No hardware was driven.\n\n| Field | Value |\n|---|---|\n| Protocol | `fade-calm-01` 0.1.0 (evidence tag SYNTHETIC) |\n| Seed | 42 |\n| Final state | **LATCHED** (residual_latch) |\n| Planned duration | 60.0 s (TARGET) |\n| Elapsed running time | 5.0 s (SYNTHETIC) |\n| Final dim factor | 1.0 (SYNTHETIC) |\n| Frames received / raw retained | 5 (SYNTHETIC) / 5 (SYNTHETIC) |\n| Frames dimmed / latched | 0 (SYNTHETIC) / 1 (SYNTHETIC) |\n| Max R / max S | 0.8000000000000002 (SYNTHETIC) / 0.8000000000000002 (SYNTHETIC) |\n| tau / dim threshold | 0.5 (TARGET) / 0.35 (TARGET) |\n\n## Transitions\n\n- t=0 ms: CREATED -> SCREENED (screening_on_file)\n- t=0 ms: SCREENED -> CONSENTED (consent_active)\n- t=0 ms: CONSENTED -> ARMED (envelope_ok)\n- t=0 ms: ARMED -> RUNNING (participant_confirmed)\n- t=5000 ms: RUNNING -> LATCHED (residual_latch)\n\n## Latch\n\n- reason: `residual_latch`; detail: S >= tau (0.5); action: stop\n\n## Not measured\n\n- any physiological, neurological or health outcome\n- comfort, wellbeing, relaxation or 'coherence'\n- real light, sound or vibration output (devices are simulated)\n- latency on real hardware\n\n## Provenance\n\n- code: spark-iis-api 0.1.0, source tree sha256 `1299f32a9cc85f3006e4d27ae92bae6d5ef71dcc0548d65a20c15801f27f9f55`, commit `unrecorded`\n- protocol sha256 `9f9e95a20851a93cc040b3fc3326794b94d8188e533bcefc0abab7ce6ba850cc`\n- event log sha256 `d02733e873ad18289d5501eba1fec478af3c42e7ff771c275d8c3dcd6fac88e0`\n- telemetry hash-list sha256 `9fd04347ea36abbe634f186da85b03301933a8750d09800214e44d1f935c79f1`\n- report sha256 `1d369d54b30c37a902f8a8f39114acb7498d9788f2306dc9c2b40637ea9f9135`\n",
+  "report": {
+    "boundary": "This software is not a medical device. It does not diagnose, treat, cure or prevent any condition. No therapeutic, neurological, \"coherence\", HBOT-synergy or quantum effect is claimed or established. All numbers are tagged SYNTHETIC, REPORTED, TARGET or UNRUN.",
+    "claims_made": [],
+    "elapsed_running_s": {
+      "tag": "SYNTHETIC",
+      "unit": "s",
+      "value": 5.0
+    },
+    "end_reason": "residual_latch",
+    "envelope_limits": {
+      "heartbeat_timeout_ms": {
+        "tag": "TARGET",
+        "unit": "ms",
+        "value": 500
+      },
+      "mandatory_break_s": {
+        "tag": "TARGET",
+        "unit": "s",
+        "value": 600.0
+      },
+      "max_audio_dba": {
+        "tag": "TARGET",
+        "unit": "dB(A)",
+        "value": 70.0
+      },
+      "max_continuous_haptic_s": {
+        "tag": "TARGET",
+        "unit": "s",
+        "value": 60.0
+      },
+      "max_flash_hz": {
+        "source": "WCAG 2.3.1",
+        "tag": "TARGET",
+        "unit": "Hz",
+        "value": 3.0
+      },
+      "max_flashing_field_fraction": {
+        "tag": "TARGET",
+        "unit": "fraction",
+        "value": 0.25
+      },
+      "max_session_s": {
+        "tag": "TARGET",
+        "unit": "s",
+        "value": 1200.0
+      },
+      "min_audio_fade_s": {
+        "tag": "TARGET",
+        "unit": "s",
+        "value": 5.0
+      },
+      "min_fade_ramp_s": {
+        "tag": "TARGET",
+        "unit": "s",
+        "value": 1.0
+      },
+      "stop_ramp_ms": {
+        "tag": "TARGET",
+        "unit": "ms",
+        "value": 1000
+      }
+    },
+    "final_dim_factor": {
+      "tag": "SYNTHETIC",
+      "value": 1.0
+    },
+    "final_state": "LATCHED",
+    "frames": {
+      "dimmed": {
+        "tag": "SYNTHETIC",
+        "value": 0
+      },
+      "frame_tags_seen": {
+        "SYNTHETIC": 5
+      },
+      "latched": {
+        "tag": "SYNTHETIC",
+        "value": 1
+      },
+      "max_R": {
+        "tag": "SYNTHETIC",
+        "value": 0.8000000000000002
+      },
+      "max_S": {
+        "tag": "SYNTHETIC",
+        "value": 0.8000000000000002
+      },
+      "raw_deleted_by_consent_withdrawal": false,
+      "raw_retained": {
+        "tag": "SYNTHETIC",
+        "value": 5
+      },
+      "received": {
+        "tag": "SYNTHETIC",
+        "value": 5
+      }
+    },
+    "latch": {
+      "R": 0.8000000000000002,
+      "S": 0.8000000000000002,
+      "action": "stop",
+      "channel": "oes-0",
+      "detail": "S >= tau (0.5)",
+      "reason": "residual_latch",
+      "sid": "s-9019097b2ffd",
+      "t_ms": 5000,
+      "tag": "SYNTHETIC",
+      "tau": 0.5
+    },
+    "latch_cleared": {
+      "note": "SYNTHETIC demo: drift injected on purpose",
+      "operator_id": "op-demo",
+      "t_ms": 5000
+    },
+    "not_measured": [
+      "any physiological, neurological or health outcome",
+      "comfort, wellbeing, relaxation or 'coherence'",
+      "real light, sound or vibration output (devices are simulated)",
+      "latency on real hardware"
+    ],
+    "participant_id": "p-ad31c8a86ddb",
+    "planned_duration_s": {
+      "tag": "TARGET",
+      "unit": "s",
+      "value": 60.0
+    },
+    "protocol_evidence_tag": "SYNTHETIC",
+    "protocol_id": "fade-calm-01",
+    "protocol_version": "0.1.0",
+    "schema": "spark-iis-evidence/0.1",
+    "seed": 42,
+    "sid": "s-9019097b2ffd",
+    "thresholds": {
+      "default_tau": {
+        "tag": "TARGET",
+        "value": 0.5
+      },
+      "dim_threshold": {
+        "tag": "TARGET",
+        "value": 0.35
+      },
+      "tau": {
+        "tag": "TARGET",
+        "value": 0.5
+      }
+    },
+    "transitions": [
+      {
+        "from": "CREATED",
+        "reason": "screening_on_file",
+        "t_ms": 0,
+        "to": "SCREENED"
+      },
+      {
+        "from": "SCREENED",
+        "reason": "consent_active",
+        "t_ms": 0,
+        "to": "CONSENTED"
+      },
+      {
+        "from": "CONSENTED",
+        "reason": "envelope_ok",
+        "t_ms": 0,
+        "to": "ARMED"
+      },
+      {
+        "from": "ARMED",
+        "reason": "participant_confirmed",
+        "t_ms": 0,
+        "to": "RUNNING"
+      },
+      {
+        "from": "RUNNING",
+        "reason": "residual_latch",
+        "t_ms": 5000,
+        "to": "LATCHED"
+      }
+    ],
+    "violations": []
+  }
+}

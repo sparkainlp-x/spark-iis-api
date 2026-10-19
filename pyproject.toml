@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spark-iis-api"
+version = "0.1.0"
+description = "Fail-closed reference server for the Spark Integration-Interaction-Stimulation API (simulated devices only; not a medical device)."
+readme = "README.md"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "COMMERCIAL-LICENSE.md"]
+authors = [{ name = "Jean-François Brisson" }]
+requires-python = ">=3.10,<3.14"
+dependencies = ["fastapi>=0.115", "pydantic>=2.7,<3", "httpx>=0.27"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: FastAPI",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+serve = ["uvicorn>=0.30"]
+test = ["pytest>=8", "pytest-cov>=5", "hypothesis>=6.100"]
+
+[project.scripts]
+spark-iis = "spark_iis.cli:main"
+
+[project.urls]
+Repository = "https://github.com/sparkainlp-x/spark-iis-api"
+
+[tool.setuptools]
+packages = ["spark_iis"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore:Using .httpx. with .starlette.testclient."]
+
+[tool.coverage.run]
+source = ["spark_iis"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 95
+show_missing = true

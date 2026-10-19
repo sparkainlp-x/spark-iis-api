@@ -1,0 +1,28 @@
+{
+  "upload_type": "software",
+  "title": "Spark IIS API: fail-closed Integration-Interaction-Stimulation reference server",
+  "version": "0.1.0",
+  "description": "<p>Fail-closed reference server (FastAPI, Pydantic v2) for an accessible integration, interaction and stimulation API with simulated display, audio, haptic and sensor devices only. A locked safety envelope refuses flicker above 3 Hz (WCAG 2.3.1), saturated-red flashes, flashing fields over 25%, audio above 70 dB(A), long continuous vibration and sessions over 20 min; unknown fields are refused; stop always succeeds; sensors can only dim or stop; and a residual latch (S = 0.45&middot;Peak + 0.35&middot;RMS + 0.20&middot;MeanAbs &ge; 0.50 on 32-value blocks) stops output on bad or missing data. Sessions are archived with a provenance manifest and a JSON/Markdown evidence report, with a seed-42 synthetic demo.</p><p><strong>Boundaries.</strong> This software is not a medical device. It does not diagnose, treat, cure or prevent any condition. No therapeutic, neurological, \"coherence\", HBOT-synergy or quantum effect is claimed or established. All numbers are tagged SYNTHETIC, REPORTED, TARGET or UNRUN.</p>",
+  "creators": [
+    {
+      "name": "Brisson, Jean-François",
+      "affiliation": "Spark AI NLP",
+      "orcid": "0009-0000-9778-5374"
+    }
+  ],
+  "access_right": "open",
+  "license": "AGPL-3.0-only",
+  "keywords": [
+    "accessibility",
+    "assistive technology",
+    "safety envelope",
+    "fail-closed",
+    "photosensitivity",
+    "WCAG",
+    "FastAPI",
+    "simulation",
+    "provenance",
+    "research software"
+  ],
+  "language": "eng"
+}
