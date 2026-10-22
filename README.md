@@ -15,6 +15,8 @@ WebSocket stream, and at the top of every evidence report.
 **Evidence tags used below:** SYNTHETIC = produced by the seed-42 simulated demo; REPORTED = measured on named real
 data with provenance (none in this repository); TARGET = a design limit or goal; UNRUN = not yet run.
 
+See [SPEC_v2.md](SPEC_v2.md) for the v2 draft specification (UNRUN) and its differences from this implementation.
+
 ## What it does
 
 1. **Integrate** simulated devices (display, holographic display, audio, haptic, read-only sensor) with capability
